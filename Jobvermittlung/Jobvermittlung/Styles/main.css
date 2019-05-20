@@ -1,0 +1,35 @@
+﻿^ContentPage {
+    background-color: #AAAAAA;
+}
+.card{
+	background-color: #232323;
+	border-radius: 5;
+}
+
+.id{
+	margin:0 5 5 0;
+	color:#f1f1f1;
+	font-weight: bold;
+}
+
+.title{
+	margin:0 5;
+	color:#f1f1f1;
+	font-size: large;
+}
+
+.details{
+	margin:	5;
+	color:#f1f1f1;
+}
+
+Image{
+	margin:	5;
+}
+
+.info{
+	margin: 0;
+	color:#f1f1f1;
+	border-top: 3 solid #AAAAAA;
+	border-bottom: 3 solid #AAAAAA;
+}

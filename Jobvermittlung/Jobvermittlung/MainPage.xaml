@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Jobvermittlung"
+             x:Class="Jobvermittlung.MainPage">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="Styles/main.css"/>
+    </ContentPage.Resources>
+
+    <StackLayout>        
+        <ListView ItemsSource="{Binding ListOfAllJobs}"
+                  HasUnevenRows="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+
+                        <ContentView Padding="5">
+                            <Frame OutlineColor="White"
+                                    Padding="10"
+                                    StyleClass="card">
+                                <StackLayout>
+                                    <Label Text="{Binding Id}"
+                                            StyleClass="id"/>
+                                    <Label Text="{Binding Title}"
+                                            StyleClass="title"/>
+                                    <Label Text="{Binding Details}"
+                                            StyleClass="details"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="calendar"
+                                               WidthRequest="20"
+                                               HeightRequest="20"/>
+                                        <Label Text="{Binding ArbeitZeit}"
+                                            StyleClass="info"/>    
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="euro"
+                                               WidthRequest="20"
+                                               HeightRequest="20"/>
+                                        <Label Text="{Binding Lohn}"
+                                            StyleClass="info"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="place"
+                                               WidthRequest="20"
+                                               HeightRequest="20"/>
+                                        <Label Text="{Binding Ort}"
+                                            StyleClass="info"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="flag"
+                                               WidthRequest="20"
+                                               HeightRequest="20"/>
+                                        <Label Text="{Binding Sprachniveau}"
+                                            StyleClass="info"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ContentView>                       
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
